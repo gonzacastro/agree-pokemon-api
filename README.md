@@ -44,6 +44,6 @@ $ npm run start:dev
 
 ## Notes
 
-In the documentation folder you'll find the <a href="https://github.com/gonzacastro/PokemonAPI/tree/main/documentation">Postman Collection</a> for the API consuming, nevertheless, once the program is compiled, you can access to its official documentation at <a href="localhost:3000/api">'localhost:3000/api'</a>.
+In the documentation folder you'll find the <a href="https://github.com/gonzacastro/agree-pokemon-api/tree/main/documentation">Postman Collection</a> for the API consuming, nevertheless, once the program is compiled, you can access to its official documentation at <a href="localhost:3000/api">'localhost:3000/api'</a>.
 The program works with a on-line hosted database.
 The server is built up locally listening on port 3000.
