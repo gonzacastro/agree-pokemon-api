@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "3869f888-4171-46dd-989e-e67ea060e1c7",
+		"name": "Pokemon API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllCards",
+			"item": [
+				{
+					"name": "GetAllCards",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cards"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GetAllCardsWithFilters",
+			"item": [
+				{
+					"name": "GetAllCardsWithFilters 200",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cards/filter?name=ch&hp=150",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cards",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "ch"
+								},
+								{
+									"key": "hp",
+									"value": "150"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllCardsWithFilters 400",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cards/filter?none=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cards",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "none",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GetAllCardsPaginated",
+			"item": [
+				{
+					"name": "GetAllCardsPaginated 200",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cards/paginated?take=1&page=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cards",
+								"paginated"
+							],
+							"query": [
+								{
+									"key": "take",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllCardsPaginated 400",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GetCardById",
+			"item": [
+				{
+					"name": "GetCardById 200",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cards/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cards",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCardById 400",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cards/212",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cards",
+								"212"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "InsertCard",
+			"item": [
+				{
+					"name": "InsertCard 201",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pikachu\",\r\n    \"hp\": 150,\r\n    \"first_edition\": \"false\",\r\n    \"id_expansion_pack\": 1,\r\n    \"id_type\": 5,\r\n    \"id_rarity\": 3,\r\n    \"price\": 2000,\r\n    \"image\": \"https://m.media-amazon.com/images/I/81TqgoiOIqL._AC_SY679_.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertCard 400",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pikachu\",\r\n    \"first_edition\": \"false\",\r\n    \"id_expansion_pack\": 1,\r\n    \"id_type\": 5,\r\n    \"id_rarity\": 5,\r\n    \"price\": 2000,\r\n    \"image\": \"hola\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cards"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UpdateCard",
+			"item": [
+				{
+					"name": "UpdateCard 200",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\": 999,\r\n    \"hp\": 990\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/cards/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cards",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCard 400",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\": 999,\r\n    \"hp\": 9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/cards/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cards",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DeleteCard",
+			"item": [
+				{
+					"name": "DeleteCard 200",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cards/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cards",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

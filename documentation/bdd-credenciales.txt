@@ -1,0 +1,6 @@
+host: b97t3cxnuashjhlrxnvj-mysql.services.clever-cloud.com
+database name: b97t3cxnuashjhlrxnvj
+username: uyled2kaw8pj5uxy
+password: aqugu89oufCo42GQv64d
+port: 3306
+mysql cli: mysql -h b97t3cxnuashjhlrxnvj-mysql.services.clever-cloud.com -P 3306 -u uyled2kaw8pj5uxy -p b97t3cxnuashjhlrxnvj
